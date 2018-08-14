@@ -5,11 +5,11 @@ import './contact.css';
 // The Contact component goes here.  It should be the default export.
 export default function Contact(props) {
   return (
-      <div className="contact">
-          <img src={props.photo} className="contact-photo" alt="{props.name}"/>
-          <span className="contact-name">{props.name}</span>
-          <span className="contact-address">{props.address}</span>
-      </div>
+      <section className="contact" id={`contact-${props.index}`}>
+          <img src={props.photo} className="contact-photo" alt="{props.name}'s avatar"/>
+          <h2 className="contact-name">{props.name}</h2>
+          <address className="contact-address">{props.address}</address>
+      </section>
   );
 };
 

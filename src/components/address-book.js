@@ -25,9 +25,7 @@ export default class AddressBook extends React.Component {
 
   render() {
     const contacts = this.state.contacts.map((contact, index) =>
-      <div key={index} className="contacts">
-        <Contact {...contact} />
-      </div>
+      <Contact key={index} index={index} {...contact} />
     );
     return (
       <div>
